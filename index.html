@@ -6,14 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/index.js"></script>
 
     <title>Dive Atlas :: Web Portal</title>
 </head>
 <body>
     <!-- top nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">DiveAtlas</a>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <!-- <a class="navbar-brand" href="#">DiveAtlas</a> -->
+        <a class="navbar-brand" href="#">
+            <img src="src/icon/logo.png" alt="Brand" style="width: 48px; height: 48px;">
+        </a>        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,26 +29,14 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Download</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
+              <a class="nav-link" href="#feature">Feature</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="map.html">Map</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <a class="btn btn-danger" href="#" role="button">Download Application</a>
           </form>
         </div>
     </nav>
@@ -52,15 +45,66 @@
     <header class="topHead">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
-            <div class="col-12 text-center">
+            <div class="col-lg text-left">
               <h1 class="font-weight-bolder text-white text-uppercase">Welcome to DiveAtlas</h1>
-              <p class="lead text-white text-uppercase">Navigate to your dream divesites</p>
-              <a class="btn btn-danger btn-lg" href="#" role="button">Download Application</a>
-              <img class="rounded" src="https://via.placeholder.com/150" />
+              <p class="lead text-white text-uppercase">Navigate to your dream dive sites</p>
+              <a class="btn btn-danger title-btn" href="#" role="button">Download Application</a>
+              <a class="btn btn-success title-btn" href="#" role="button">Online Map</a>
+            </div>
+            <div class="col-auto text-center">
+              <img class="img-fluid" width="550" src="src/img/DiveAtlas-Phone.png" alt="Dive Atlas on Phone" />
             </div>
           </div>
         </div>
     </header>
+
+    <!-- App Feature -->
+    <section id="feature" class="content mt-5">
+      <div class="container w-100">
+        <div class="row align-items-center">
+          <div class="col-auto text-center w-100">
+            <h2 class="text-uppercase">scuba dive sites database</h2>
+            <h3 class="text-uppercase text-danger">in you hand</h3>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-4 text-center align-items-center">
+            <img src="src/icon/map-location.svg" alt="" class="img-fluid w-25">
+            <h3>Map Marker</h3>
+            <p class="lead">Locate nearby dive sites with our map</p>
+          </div>
+          <div class="col-4 text-center align-items-center">
+            <img src="src/icon/ic_launcher_foreground.png" alt="" class="img-fluid w-100">
+          </div>
+          <div class="col-4 text-center align-items-center">
+            <img src="src/icon/snorkel.svg" alt="" class="img-fluid w-25">
+            <h3>Diver Profile</h3>
+            <p class="lead">Show your diver profile with our app</p>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-4 text-center align-items-center">
+            <img src="src/icon/newspaper.svg" alt="" class="img-fluid w-25">
+            <h3>News Feed</h3>
+            <p class="lead">Get in touch with Scuba News in real time</p>
+          </div>
+          <div class="col-4 text-center align-items-center">
+            <img src="src/icon/coral.svg" alt="" class="img-fluid w-25">
+            <h3>Dive Sites Detail</h3>
+            <p class="lead">Know the dive site before you jump in</p>
+          </div>
+          <div class="col-4 text-center align-items-center">
+            <img src="src/icon/database.svg" alt="" class="img-fluid w-25">
+            <h3>Real-time Database</h3>
+            <p class="lead">Update you information in Real-time</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <footer>
+      <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>,  <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+  </footer>
 
 </body>
 
