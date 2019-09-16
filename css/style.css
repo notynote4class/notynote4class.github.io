@@ -15,5 +15,19 @@
 
 .screenshot {
   width: 100%;
-  background-color: #034561;
+  background-image: url("../src/img/screenshotbg.jpg");
+  background-color: rgba(0,0,0,.7);
+  background-blend-mode: darken;
+
+  /* set height and fixed bg to create parallax effect while scrolling */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 850px;
+}
+
+.page-footer {
+  background-color: black;
+  color: antiquewhite;
 }
