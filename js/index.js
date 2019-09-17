@@ -4,4 +4,3 @@
 //         window.location=b
 //     }
 //     )(navigator.userAgent||navigator.vendor||window.opera,'index_m.html');
-
