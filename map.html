@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Dive Atlas :: Maps</title>
 
@@ -22,19 +23,38 @@
             }
     </style>
 
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="src/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="src/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="src/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="src/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="src/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="src/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="src/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="src/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="src/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="src/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png">
+    <link rel="manifest" href="src/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="src/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
     <!-- top nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="src/icon/logo.png" alt="Brand" style="width: 48px; height: 48px;">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark justify-content-center">
+        <a class="navbar-brand" href="index.html">
+            <img src="src/icon/logo.png" alt="Brand" style="width: 48px; height: 48px; filter: invert(100%);">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+        <div class="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto text-center">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
@@ -42,7 +62,10 @@
               <a class="nav-link" href="index.html#feature">Feature</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#screenshot">Screenshot</a>
+              <a class="nav-link" href="index.html#screenshot">Screenshot</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#aboutUs">Developer</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="#">Map</a>
@@ -67,19 +90,19 @@
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
 
     <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-              apiKey: "AIzaSyDnoOm98IxiRp76x7LOu9pPdDalLfaVeK4",
-              authDomain: "diveatlas-project.firebaseapp.com",
-              databaseURL: "https://diveatlas-project.firebaseio.com",
-              projectId: "diveatlas-project",
-              storageBucket: "diveatlas-project.appspot.com",
-              messagingSenderId: "947786091070",
-              appId: "1:947786091070:web:d1994840863aa7ecd6df6f"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-    </script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDnoOm98IxiRp76x7LOu9pPdDalLfaVeK4",
+        authDomain: "diveatlas-project.firebaseapp.com",
+        databaseURL: "https://diveatlas-project.firebaseio.com",
+        projectId: "diveatlas-project",
+        storageBucket: "diveatlas-project.appspot.com",
+        messagingSenderId: "947786091070",
+        appId: "1:947786091070:web:d1994840863aa7ecd6df6f"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+</script>
     <script src="js/map.js"></script>
 </body>
 </html>

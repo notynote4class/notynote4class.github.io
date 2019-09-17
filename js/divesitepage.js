@@ -1,0 +1,1 @@
+//this java script should get some data from database and apply information into a template in html file.
