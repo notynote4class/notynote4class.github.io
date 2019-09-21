@@ -4,13 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Pak-1</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        
+        #map {
+          height: 40%;
+        }
+    </style>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../src/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../src/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../src/favicon/apple-icon-72x72.pn  g">
+    <link rel="apple-touch-icon" sizes="76x76" href="../src/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../src/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../src/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../src/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../src/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../src/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../src/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../src/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../src/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../src/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../src/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <h1>Pak-1</h1>
+    <!-- top nav bar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark justify-content-center">
+        <!-- <a class="navbar-brand" href="#">DiveAtlas</a> -->
+        <a class="navbar-brand" href="#">
+            <img src="../src/icon/logo.png" alt="Brand" style="width: 48px; height: 48px; filter: invert(100%);">
+        </a>        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#feature">Feature</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#screenshot">Screenshot</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#aboutUs">Developer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="map.html">Map</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <a class="btn btn-danger" href="#" role="button">Download Application</a>
+          </form>
+        </div>
+    </nav>
 
+    <div id="map"></div>
+
+    <section id="Information" class="content mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img id="diveSiteImg" src="" class="img-thumbnail">
+                </div>
+                <div class="col-6">
+                    <h3 id="diveName">Name</h3>
+                    <p id="diveType">type</p>
+                    <p id="diveDept">dept</p>
+                    <p id="diveCoor">coor</p>
+                    <p id="diveDesc">Desc</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+</body>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAL5lCAen5tpEl7vg5L_Y33jDX-VgiJtY&callback=initMap" defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDnoOm98IxiRp76x7LOu9pPdDalLfaVeK4",
+          authDomain: "diveatlas-project.firebaseapp.com",
+          databaseURL: "https://diveatlas-project.firebaseio.com",
+          projectId: "diveatlas-project",
+          storageBucket: "diveatlas-project.appspot.com",
+          messagingSenderId: "947786091070",
+          appId: "1:947786091070:web:d1994840863aa7ecd6df6f"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
 
     <!-- Use javascript to get data from database and apply it into this page -->
     <script src="../js/divesitepage.js"></script>
-</body>
 </html>
