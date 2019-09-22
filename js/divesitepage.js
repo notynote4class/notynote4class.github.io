@@ -204,9 +204,9 @@ dRef.once('value', function(snapshot){
     //set information into html
     document.getElementById("diveSiteImg").src = img_val;
     document.getElementById("diveName").innerHTML = name_val;
-    document.getElementById("diveType").innerHTML = type_val;
-    document.getElementById("diveDept").innerHTML = dept_val;
-    document.getElementById("diveCoor").innerHTML = coor_val;
+    document.getElementById("diveType").innerHTML = "Type: " + type_val;
+    document.getElementById("diveDept").innerHTML = "Dept: " + dept_val;
+    document.getElementById("diveCoor").innerHTML = "Location: " + coor_val;
     document.getElementById("diveDesc").innerHTML = desc_val;
 
     //define coordinate from data that we got from database
