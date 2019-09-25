@@ -31,7 +31,7 @@
     <meta name="msapplication-TileImage" content="src/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="100">
     <!-- top nav bar -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark justify-content-center">
         <!-- <a class="navbar-brand" href="#">DiveAtlas</a> -->
@@ -44,8 +44,8 @@
       
         <div class="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto text-center">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="#Home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#feature">Feature</a>
@@ -67,21 +67,25 @@
     </nav>
 
       <!-- Full Page Image Header -->
-    <header class="topHead">
-        <div class="container h-100">
-          <div class="row h-100 align-items-center">
-            <div class="col-lg text-left">
-              <h1 class="font-weight-bolder text-white text-uppercase">Welcome to DiveAtlas</h1>
-              <p class="lead text-white text-uppercase">Navigate to your dream dive sites</p>
-              <a class="btn btn-danger title-btn" href="#" role="button">Download Application</a>
-              <a class="btn btn-success title-btn" href="map.html" role="button">Online Map</a>
-            </div>
-            <div class="col-auto text-center">
-              <img class="img-fluid" width="550" src="src/img/DiveAtlas-Phone.png" alt="Dive Atlas on Phone" />
+    <section id="Home">
+      <header class="topHead">
+          <div class="container h-100">
+            <div class="row h-100 align-items-center">
+              <div class="col-lg text-left">
+                <h1 class="font-weight-bolder text-white text-uppercase">Welcome to DiveAtlas</h1>
+                <p class="lead text-white text-uppercase">Navigate to your dream dive sites</p>
+                <a class="btn btn-danger title-btn" href="#" role="button">Download Application</a>
+                <a class="btn btn-success title-btn" href="map.html" role="button">Online Map</a>
+              </div>
+              <div class="col-auto text-center">
+                <div class="appImg">
+                    <img class="img-fluid" width="550" src="src/img/DiveAtlas-Phone.png" alt="Dive Atlas on Phone" />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-    </header>
+      </header>
+    </section>
 
     <!-- App Feature -->
     <section id="feature" class="content mt-5">
